@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "magrabesblackbox"
+version = "0.1.0"
+description = "Take Home for Quants"
+authors = ["Sam <sam@takehomes.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.25.2"
+pandas = "^2.0.3"
+yfinance = "^0.2.28"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+main = "magrabesblackbox.main:run"
+
+[tool.takehomes.tasks]
+poetry_install = "poetry install"
+run = "poetry run main"
